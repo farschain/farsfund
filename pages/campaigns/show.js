@@ -26,7 +26,7 @@ class CampaignShow extends Component {
     }
 
 
-    renderCards() {
+    renderProjects() {
 
         const { balance, manager, minimumContribution, requestCount, approversCount, title } = this.props;
 
@@ -83,7 +83,7 @@ class CampaignShow extends Component {
                 <h3>Project Show</h3>
                 <Grid stackable reversed='mobile'>
                     <Grid.Column width={10}>
-                        {this.renderCards()}
+                        {this.renderProjects()}
                     </Grid.Column>
 
                     <Grid.Column width={6}>

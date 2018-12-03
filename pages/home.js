@@ -26,7 +26,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container text>
         <Header
             as='h1'
-            content='Imagine-Dorium'
+            content='Imagine-Donation-In-Transparent-Platform'
             inverted
             style={{
                 fontSize: mobile ? '2em' : '4em',

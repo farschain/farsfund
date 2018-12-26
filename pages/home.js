@@ -26,7 +26,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container text>
         <Header
             as='h1'
-            content='Imagine-Donation-In-Transparent-Platform'
+            content='Raise fund for your dreams'
             inverted
             style={{
                 fontSize: mobile ? '2em' : '4em',
@@ -37,7 +37,7 @@ const HomepageHeading = ({ mobile }) => (
         />
         <Header
             as='h2'
-            content='Do whatever you want when you want to.'
+            content='Blockchain fundrasing platform'
             inverted
             style={{
                 fontSize: mobile ? '1.5em' : '1.7em',
@@ -98,6 +98,7 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
+
                                 {/* <Menu.Item as='a' active>
                                     Home
                                 </Menu.Item>
@@ -105,10 +106,10 @@ class DesktopContainer extends Component {
                                 <Menu.Item as='a'>Company</Menu.Item>
                                 <Menu.Item as='a'>Careers</Menu.Item> */}
 
-                                <Menu.Item position='right'>
+                                {/* <Menu.Item position='right'>
                                     <Button as='a' inverted={!fixed}> Log in</Button>
                                     <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                                </Menu.Item>
+                                </Menu.Item> */}
                             </Container>
                         </Menu>
                         <HomepageHeading />
@@ -211,18 +212,18 @@ const HomepageLayout = () => (
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Help Companies and Companions
+                        Donation platform and campaigns
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            We can give your company superpowers to do things that they never thought possible.
-                            Let us delight your customers and empower your needs... through pure data analytics.
+                        are designed for nonprofits and are, just as the name suggests, strictly donation-based. 
+                        Farschain has a donation platform based on blockchain and offer services also.
             </p>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Make Bananas That Can Dance
+                        Reward-based crowdfunding
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-                            bioengineered.
+                        is the type of fundraising used on Kickstarter and Indiegogo,
+                         and functions by offering donors a reward such as an early product release.
             </p>
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
@@ -302,7 +303,22 @@ const HomepageLayout = () => (
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                        <Grid.Column width={3}>
+                    <Grid.Column width={15}>
+                            {/* <Header as='h4' inverted>
+                                Footer Header
+              </Header> */}
+                            <p>
+                                This app powered by         
+                                {/* <Link className='ui divider' route={`http://www.farschain.com`}>
+                            farschain.com 
+                        </Link> */}
+                            <a class="" style={{marginLeft:'10px'}} href="http://www.farschain.com">farschain.com</a>
+
+                            </p>
+                            <p>
+                            </p>
+                        </Grid.Column>
+                        {/* <Grid.Column width={3}>
                             <Header inverted as='h4' content='About' />
                             <List link inverted>
                                 <List.Item as='a'>Sitemap</List.Item>
@@ -327,12 +343,13 @@ const HomepageLayout = () => (
                             <p>
                                 Extra space for a call to action inside the footer that could help re-engage users.
               </p>
-                        </Grid.Column>
+                        </Grid.Column> */}
                     </Grid.Row>
                 </Grid>
             </Container>
         </Segment>
     </ResponsiveContainer>
 )
+
 
 export default HomepageLayout

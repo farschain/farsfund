@@ -318,7 +318,7 @@ const HomepageLayout = () => (
                             <p>
                             </p>
                         </Grid.Column>
-                        
+                         
                     </Grid.Row>
                 </Grid>
             </Container>

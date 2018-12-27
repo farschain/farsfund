@@ -309,7 +309,7 @@ const HomepageLayout = () => (
               </Header> */}
                             <p>
                                 This app powered by         
-                                {/* <Link className='ui divider' route={`http://www.farschain.com`}>
+                                {/* <Link className='ui divider text' route={`http://www.farschain.com`}>
                             farschain.com 
                         </Link> */}
                             <a class="" style={{marginLeft:'10px'}} href="http://www.farschain.com">farschain.com</a>

@@ -50,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
                 marginTop: mobile ? '0.5em' : '0.5em',
             }}
         />
-        <Button primary size='huge' style={{marginTop:'0.5em'}}>
+        <Button size='huge' style={{marginTop:'0.5em'}}>
             Get Started
       <Icon name='right arrow' />
         </Button>
@@ -92,7 +92,7 @@ class DesktopContainer extends Component {
                     <Segment
                         inverted
                         textAlign='center'
-                        style={{ minHeight: 700, padding: '1em 0em' }}
+                        style={{ minHeight: 700, padding: '1em 0em', backgroundColor: '#142b1a' }}
                         vertical
                     >
                         <Menu
@@ -103,18 +103,6 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
-
-                                {/* <Menu.Item as='a' active>
-                                    Home
-                                </Menu.Item>
-                                <Menu.Item as='a'>Work</Menu.Item>
-                                <Menu.Item as='a'>Company</Menu.Item>
-                                <Menu.Item as='a'>Careers</Menu.Item> */}
-
-                                {/* <Menu.Item position='right'>
-                                    <Button as='a' inverted={!fixed}> Log in</Button>
-                                    <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                                </Menu.Item> */}
                             </Container>
                         </Menu>
                         <HomepageHeading />
@@ -266,7 +254,7 @@ const HomepageLayout = () => (
                 </Grid.Row>   
             </Grid>
         </Segment>
-<Segment style={{ padding: '0em 0em 3em',borderBottom:'unset !important',backgroundColor: '#344b69' }} vertical >
+<Segment style={{ padding: '0em 0em 3em',borderBottom:'unset !important', backgroundColor: '#142b1a' }} vertical >
     <Grid container stackable verticalAlign='middle'>
     <Grid.Row style={{paddingTop:'30px'}}>
                     <Grid.Column textAlign='center'>
@@ -294,9 +282,9 @@ const HomepageLayout = () => (
                 <Grid divided inverted stackable>
                     <Grid.Row>
                     <Grid.Column width={15}>
-                            <p style={{marginTop:'5px'}}>
-                                This app powered by
-                            <a class="" style={{marginLeft:'10px'}} href="http://www.farschain.com">farschain.com</a>
+                            <p style={{marginTop:'5px', fontSize: '10px'}}>
+                                Powered By
+                            <a class="" style={{marginLeft:'10px', fontSize: '12px'}} href="http://www.farschain.com">farschain.com</a>
                             </p>
                             <p>
                             </p>

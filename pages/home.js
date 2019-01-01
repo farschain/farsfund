@@ -245,7 +245,7 @@ const HomepageLayout = () => (
                          </p>
                         <Header as='h3' style={{ fontSize: '2em' }}>
                         Open-source project
-            </Header>
+            </Header>  
                         <p style={{ fontSize: '1.33em',textAlign: 'justify' }}>
                         By moving the open-source ecosystem onto the blockchain,
                          we enable all of this activity to happen in the open, in a network that cannot be censored or

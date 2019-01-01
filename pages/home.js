@@ -16,6 +16,7 @@ import {
     Segment,
     Sidebar,
     Visibility,
+    Card
 } from 'semantic-ui-react';
 
 /* eslint-disable react/no-multi-comp */
@@ -42,10 +43,10 @@ const HomepageHeading = ({ mobile }) => (
             style={{
                 fontSize: mobile ? '1.5em' : '1.7em',
                 fontWeight: 'normal',
-                marginTop: mobile ? '0.5em' : '1.5em',
+                marginTop: mobile ? '0.5em' : '0.5em',
             }}
         />
-        <Button primary size='huge'>
+        <Button primary size='huge' style={{marginTop:'0.5em'}}>
             Get Started
       <Icon name='right arrow' />
         </Button>
@@ -201,124 +202,101 @@ ResponsiveContainer.propTypes = {
     children: PropTypes.node,
 }
 
+// const items = [
+//     {
+//       header: 'Project Report - April',
+//       description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',
+//       meta: 'ROI: 30%',
+//     },
+//     {
+//       header: 'Project Report - May',
+//       description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
+//       meta: 'ROI: 34%',
+//     },
+    
+//   ]
+
+//    const CardExampleGroupCentered = () => <Card.Group items={items} />
+
+
+
+
+
+
 const HomepageLayout = () => (
     <ResponsiveContainer>
         <Head>
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
         </Head>
-
-        <Segment style={{ padding: '8em 0em' }} vertical>
+        <Segment style={{ padding: '4em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                        Donation platform and campaigns
+                        Decentralized open innovation platform
             </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                        are designed for nonprofits and are, just as the name suggests, strictly donation-based. 
-                        Farschain has a donation platform based on blockchain and offer services also.
-            </p>
+                        <p style={{ fontSize: '1.33em',textAlign: 'justify' }} >
+                        Farsfund is a decentralized open innovation platform that 
+                        help philanthropists and social activists to fundraise their ideas,
+                         allowing them to create and manage projects on a transparent and
+                          democratic vote-based eco-system.
+                        Removing a third party for trust, it allows the public to
+                         follow the capital and how it has been used and make it possible for donors to validate the progress of the project and stop or accelerate if necessary. This will help the community to tailor their efforts in the right direction.
+                         </p>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                        Reward-based crowdfunding
+                        Open-source project
             </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                        is the type of fundraising used on Kickstarter and Indiegogo,
-                         and functions by offering donors a reward such as an early product release.
+                        <p style={{ fontSize: '1.33em',textAlign: 'justify' }}>
+                        By moving the open-source ecosystem onto the blockchain,
+                         we enable all of this activity to happen in the open, in a network that cannot be censored or
+                          controlled by any one party. The code is in the hands of the users. 
+                        Anyone can read the code that runs or copy the code to create a new version that suits their needs.
             </p>
+                    <div style={{textAlign:'left',paddingTop:'10px'}}>
+                          <Button basic color='black' style={{borderRadius: '20px'}}>Contribute Code</Button>
+                    </div>
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
                         <Image bordered rounded size='large' src='/static/white-image.png' />
                     </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column textAlign='center'>
-                        <Link route={`/main`}>
-                            <Button as="a" size='huge'>Go to Projects</Button>
-                        </Link>
-                    </Grid.Column>
-                </Grid.Row>
+                </Grid.Row>   
             </Grid>
         </Segment>
+<Segment style={{ padding: '0em 0em 3em',borderBottom:'unset !important',backgroundColor: '#344b69' }} vertical >
+    <Grid container stackable verticalAlign='middle'>
+    <Grid.Row style={{paddingTop:'30px'}}>
+                    <Grid.Column textAlign='center'>
+                    <div style={{display: 'flex',    justifyContent: 'center'}}>
+                    <div style={{marginTop:'15px'}}>
+                        <p style={{ fontSize: '1.33em',color:'#fff',marginTop:'10px',paddingRight:'20px' }}>
+                        Launch your own campaign using one of Farsfund project templates.
+                        </p>
+                        </div>
+                        <div>
+                    </div>
 
-        {/* <Segment style={{ padding: '0em' }} vertical>
-            <Grid celled='internally' columns='equal' stackable>
-                <Grid.Row textAlign='center'>
-                    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                        <Header as='h3' style={{ fontSize: '2em' }}>
-                            "What a Company"
-            </Header>
-                        <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-                    </Grid.Column>
-                    <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                        <Header as='h3' style={{ fontSize: '2em' }}>
-                            "I shouldn't have gone with their competitor."
-            </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                            <Image avatar src='/images/avatar/large/nan.jpg' />
-                            <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
+                        <Link route={`/main`}>
+                            <Button as="a" size='huge' style={{marginTop:'15px'}}>Go to Projects</Button>
+                        </Link>
+                        </div>
+
                     </Grid.Column>
                 </Grid.Row>
-            </Grid>
-        </Segment> */}
+    </Grid>
+</Segment>
 
-        {/* <Segment style={{ padding: '8em 0em' }} vertical>
-            <Container text>
-                <Header as='h3' style={{ fontSize: '2em' }}>
-                    Breaking The Grid, Grabs Your Attention
-        </Header>
-                <p style={{ fontSize: '1.33em' }}>
-                    Instead of focusing on content creation and hard work, we have learned how to master the
-                    art of doing nothing by providing massive amounts of whitespace and generic content that
-                    can seem massive, monolithic and worth your attention.
-        </p>
-                <Button as='a' size='large'>
-                    Read More
-        </Button>
-
-                <Divider
-                    as='h4'
-                    className='header'
-                    horizontal
-                    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-                >
-                    <a href='#'>Case Studies</a>
-                </Divider>
-
-                <Header as='h3' style={{ fontSize: '2em' }}>
-                    Did We Tell You About Our Bananas?
-        </Header>
-                <p style={{ fontSize: '1.33em' }}>
-                    Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-                    it's really true. It took years of gene splicing and combinatory DNA research, but our
-                    bananas can really dance.
-        </p>
-                <Button as='a' size='large'>
-                    I'm Still Quite Interested
-        </Button>
-            </Container>
-        </Segment> */}
-
-        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+        <Segment inverted vertical>
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
                     <Grid.Column width={15}>
-                            {/* <Header as='h4' inverted>
-                                Footer Header
-              </Header> */}
-                            <p>
-                                This app powered by         
-                                {/* <Link className='ui divider text' route={`http://www.farschain.com`}>
-                            farschain.com 
-                        </Link> */}
+                            <p style={{marginTop:'5px'}}>
+                                This app powered by
                             <a class="" style={{marginLeft:'10px'}} href="http://www.farschain.com">farschain.com</a>
-
                             </p>
                             <p>
                             </p>
                         </Grid.Column>
-                         
                     </Grid.Row>
                 </Grid>
             </Container>

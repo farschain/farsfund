@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "ajv": "^6.0.0",
     "bigchaindb-driver": "^4.1.0",
     "es6": "0.0.7",

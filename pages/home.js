@@ -23,8 +23,12 @@ import {
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+const ImageExampleFluid = () => <Image src='/static/logofarsfund.png' fluid style={{width:'65%',left:'17%'}}/>
 const HomepageHeading = ({ mobile }) => (
     <Container text>
+    <div>
+    <ImageExampleFluid />
+    </div>
         <Header
             as='h1'
             content='Raise fund for your dreams'
@@ -33,7 +37,7 @@ const HomepageHeading = ({ mobile }) => (
                 fontSize: mobile ? '2em' : '4em',
                 fontWeight: 'normal',
                 marginBottom: 0,
-                marginTop: mobile ? '1.5em' : '3em',
+                 marginTop: mobile ? '1.5em' : '1.5em',
             }}
         />
         <Header

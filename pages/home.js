@@ -18,6 +18,7 @@ import {
     Visibility,
     Card
 } from 'semantic-ui-react';
+import css from '../assets/css/custom.css';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -186,7 +187,6 @@ MobileContainer.propTypes = {
 const ResponsiveContainer = ({ children }) => (
     <div>
         <DesktopContainer>{children}</DesktopContainer>
-        <MobileContainer>{children}</MobileContainer>
     </div>
 )
 
@@ -194,31 +194,13 @@ ResponsiveContainer.propTypes = {
     children: PropTypes.node,
 }
 
-// const items = [
-//     {
-//       header: 'Project Report - April',
-//       description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',
-//       meta: 'ROI: 30%',
-//     },
-//     {
-//       header: 'Project Report - May',
-//       description: 'Bring to the table win-win survival strategies to ensure proactive domination.',
-//       meta: 'ROI: 34%',
-//     },
-    
-//   ]
-
-//    const CardExampleGroupCentered = () => <Card.Group items={items} />
-
-
-
-
-
 
 const HomepageLayout = () => (
     <ResponsiveContainer>
         <Head>
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
+            {/* <link rel="stylesheet" href="/assets/css/custom.css"></link> */}
         </Head>
         <Segment style={{ padding: '4em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
@@ -245,7 +227,7 @@ const HomepageLayout = () => (
                         Anyone can read the code that runs or copy the code to create a new version that suits their needs.
             </p>
                     <div style={{textAlign:'left',paddingTop:'10px'}}>
-                          <Button basic color='black' style={{borderRadius: '20px'}}>Contribute Code</Button>
+                    <Button href="https://github.com/farschain/farsfund" as="a" basic color='black' style={{borderRadius: '20px'}}>Contribute Code</Button>
                     </div>
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
@@ -284,7 +266,7 @@ const HomepageLayout = () => (
                     <Grid.Column width={15}>
                             <p style={{marginTop:'5px', fontSize: '10px'}}>
                                 Powered By
-                            <a class="" style={{marginLeft:'10px', fontSize: '12px'}} href="http://www.farschain.com">farschain.com</a>
+                            <a style={{marginLeft:'10px', fontSize: '12px'}} href="http://www.farschain.com">farschain.com</a>
                             </p>
                             <p>
                             </p>

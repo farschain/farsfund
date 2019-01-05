@@ -7,7 +7,7 @@ export default() =>{
         <Menu style={{ marginTop: '10px' }}>
             <Link route='/main'>
                 <a style={{ marginTop: '10px', marginLeft: '5px' }}>
-                    <img src="/static/homatech.png" width="80px" />
+                    <img src="/static/logofarsfund.png" width="80px" />
                 </a>
             </Link>
             <Menu.Menu position="right">

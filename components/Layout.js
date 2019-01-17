@@ -12,6 +12,7 @@ export default (props) => {
                 <Loader>Loading</Loader>
             </Dimmer>
             <Head>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
                 <style jsx global>
                     {`

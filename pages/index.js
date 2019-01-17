@@ -1,5 +1,21 @@
 import React, { Component } from 'react';
-import { Card, Popup, Image, Segment, Container, Grid, Header } from 'semantic-ui-react';
+import {
+    Popup,
+    Button,
+    Container,
+    Divider,
+    Grid,
+    Header,
+    Icon,
+    Image,
+    List,
+    Menu,
+    Responsive,
+    Segment,
+    Sidebar,
+    Visibility,
+    Card
+} from 'semantic-ui-react';
 import LandingLayout from '../components/LandingLayout';
 import { Router } from '../routes';
 
@@ -11,6 +27,7 @@ class Landing extends Component {
     };
 
     goToMain = () => {
+
         // Checking if Web3 has been injected by the browser (Mist/MetaMask)
         if (typeof web3 !== 'undefined') {
 
@@ -35,6 +52,7 @@ class Landing extends Component {
 
     CardExampleColumnCount() {
         const metamask = '/static/metamask-black.svg';
+        const cipher = '/static/cipher.png';
         const ledger = '/static/ledger-black.svg';
         const keystore = '/static/json-black.svg';
         const trezor = '/static/trezor-black.svg';
@@ -46,8 +64,7 @@ class Landing extends Component {
                 <Segment padded="very" size='large' style={{ backgroundColor:'#163150' }}>
                 <Header style={{color: '#fff'}} as="h2" textAlign="center">How would you like to access your wallet?</Header>
                     <Grid stackable>
-                        <Grid.Row columns={5}>
-
+                        <Grid.Row columns={6}>
                             <Grid.Column>
                                 <Popup
                                     trigger={<Card raised onClick={this.goToMain}><Image src={metamask} centered style={{ background: 'unset', marginTop: '20px', marginBottom: '20px' }} width='30px' height='30px' /><Card.Content><Card.Header textAlign="center">Metamask</Card.Header> <Card.Meta textAlign='center'><br /></Card.Meta></Card.Content></Card>}
@@ -58,6 +75,16 @@ class Landing extends Component {
                                     content={this.state.errorMessage} />
                             </Grid.Column>
                             <Grid.Column>
+                                <Popup
+                                    trigger={<Card raised href="/main">
+                                    <Image src={cipher} centered style={{ background: 'unset', marginTop: '20px', marginBottom: '20px' }} width='30px' height='30px' /><Card.Content><Card.Header textAlign="center">Cipher</Card.Header> <Card.Meta textAlign='center'><br /></Card.Meta></Card.Content></Card>}
+                                    size='large'
+                                    position="bottom left"
+                                    open={''}
+                                    onClose={() => { this.setState({ errorMessage: '', showModal: false }) }}
+                                    content={this.state.errorMessage} />
+                            </Grid.Column>
+                            <Grid.Column> 
                                 <Card raised>
                                     <Image src={ledger} centered style={{ background: 'unset', marginTop: '20px', marginBottom: '20px' }} width='30px' height='30px' />
                                     <Card.Content>

@@ -2,3 +2,17 @@
     color: red;
     background-color:#eee;
 } */
+@media(max-width:768px){
+    .g-py-mobile{
+        padding: 4em 0em 4em !important;
+    }
+}
+@media(max-width:475px){
+    .g-height-mobile{
+        height: 200px !important;
+    }
+}
+.g-mx-15{
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}

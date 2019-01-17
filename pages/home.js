@@ -138,10 +138,10 @@ class MobileContainer extends Component {
         return (
             <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
                 <Sidebar.Pushable>
-                    <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
+                    {/* <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
                         <Menu.Item as='a'>Log in</Menu.Item>
                         <Menu.Item as='a'>Sign Up</Menu.Item>
-                    </Sidebar>
+                    </Sidebar> */}
 
                     <Sidebar.Pusher
                         dimmed={sidebarOpened}
@@ -151,10 +151,11 @@ class MobileContainer extends Component {
                         <Segment
                             inverted
                             textAlign='center'
-                            style={{ minHeight: 350, padding: '1em 0em' }}
+                            className="g-py-mobile"
+                            style={{ minHeight: 350, padding: '1em 0em' ,backgroundColor:'rgb(20, 43, 26)'}}
                             vertical
                         >
-                            <Container>
+                            {/* <Container>
                                 <Menu inverted pointing secondary size='large'>
                                     <Menu.Item onClick={this.handleToggle}>
                                         <Icon name='sidebar' />
@@ -168,7 +169,7 @@ class MobileContainer extends Component {
                     </Button>
                                     </Menu.Item>
                                 </Menu>
-                            </Container>
+                            </Container> */}
                             <HomepageHeading mobile />
                         </Segment>
 
@@ -187,6 +188,7 @@ MobileContainer.propTypes = {
 const ResponsiveContainer = ({ children }) => (
     <div>
         <DesktopContainer>{children}</DesktopContainer>
+        <MobileContainer>{children}</MobileContainer>
     </div>
 )
 
@@ -198,11 +200,11 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
     <ResponsiveContainer>
         <Head>
-        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css"></link>
             {/* <link rel="stylesheet" href="/assets/css/custom.css"></link> */}
         </Head>
-        <Segment style={{ padding: '4em 0em' }} vertical>
+        <Segment style={{ padding: '4em 0em' }} vertical className="g-mx-15">
             <Grid container stackable verticalAlign='middle'>
                 <Grid.Row>
                     <Grid.Column width={8}>
@@ -236,13 +238,15 @@ const HomepageLayout = () => (
                 </Grid.Row>   
             </Grid>
         </Segment>
-<Segment style={{ padding: '0em 0em 3em',borderBottom:'unset !important', backgroundColor: '#142b1a' }} vertical >
-    <Grid container stackable verticalAlign='middle'>
-    <Grid.Row style={{paddingTop:'30px'}}>
-                    <Grid.Column textAlign='center'>
+<Segment
+ style={{ padding: '0',borderBottom:'unset !important', backgroundColor: '#142b1a' }}
+  vertical >
+    <Grid container stackable verticalAlign='middle' className="g-mx-15">
+    <Grid.Row style={{}}>
+                    <Grid.Column textAlign='center' style={{}} className="g-height-mobile">
                     <div style={{display: 'flex',    justifyContent: 'center'}}>
-                    <div style={{marginTop:'15px'}}>
-                        <p style={{ fontSize: '1.33em',color:'#fff',marginTop:'10px',paddingRight:'20px' }}>
+                    <div style={{marginTop:'15px',height:'50px'}}>
+                        <p style={{ fontSize: '1.33em',color:'#fff',paddingRight:'20px' }}>
                         Launch your own campaign using one of Farsfund project templates.
                         </p>
                         </div>
@@ -250,7 +254,7 @@ const HomepageLayout = () => (
                     </div>
 
                         <Link route={`/main`}>
-                            <Button as="a" size='huge' style={{marginTop:'15px'}}>Go to Projects</Button>
+                            <Button as="a" size='huge' style={{marginTop:'15px',marginBottom:'30px'}}>Go to Projects</Button>
                         </Link>
                         </div>
 
@@ -263,7 +267,7 @@ const HomepageLayout = () => (
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                    <Grid.Column width={15}>
+                    <Grid.Column width={15} className="g-mx-15">
                             <p style={{marginTop:'5px', fontSize: '10px'}}>
                                 Powered By
                             <a style={{marginLeft:'10px', fontSize: '12px'}} href="http://www.farschain.com">farschain.com</a>

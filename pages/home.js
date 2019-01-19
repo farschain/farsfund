@@ -26,36 +26,45 @@ import css from '../assets/css/custom.css';
  */
 const ImageExampleFluid = () => <Image src='/static/logofarsfund.png' fluid style={{width:'65%',left:'17%'}}/>
 const HomepageHeading = ({ mobile }) => (
-    <Container text>
-    <div>
-    <ImageExampleFluid />
-    </div>
-        <Header
-            as='h1'
-            content='Raise fund for your dreams'
-            inverted
-            style={{
-                fontSize: mobile ? '2em' : '4em',
+    <div >
+                <Header as='h3' 
+                 style={{
+                fontSize: mobile ? '2em' : '3.5em',
+                fontWeight: mobile ? '500' : '800',
                 fontWeight: 'normal',
-                marginBottom: 0,
-                 marginTop: mobile ? '1.5em' : '1.5em',
-            }}
-        />
-        <Header
-            as='h2'
-            content='Blockchain fundrasing platform'
-            inverted
-            style={{
-                fontSize: mobile ? '1.5em' : '1.7em',
-                fontWeight: 'normal',
-                marginTop: mobile ? '0.5em' : '0.5em',
-            }}
-        />
-        <Button size='huge' style={{marginTop:'0.5em'}}>
-            Get Started
-      <Icon name='right arrow' />
+                marginBottom: mobile ? '1.5em' : '25px',
+                 marginTop: mobile ? '1.5em' : '2.5em',
+                 marginRight: mobile ? '1.5em' : '7em',
+            }}>
+                       FarsFund
+            </Header>  
+                        <p style={{ fontSize: '25px',textAlign: mobile? '': 'justify' }}>
+                        Raise fund for your dreams
+                         </p>
+                         <p style={{ fontSize: '1.33em',textAlign:mobile?'': 'justify',marginTop:'25px' }}>
+                         Blockchain fundrasing platform
+                         </p>
+                         <Grid container stackable verticalAlign='middle'
+                         style={{marginTop:'40px'}}
+                         >
+                <Grid.Row style={{right:'25px'}}>
+                    <Grid.Column width={8}>
+                    <Button
+                    href="https://github.com/farschain/farsfund"
+                     className="u-btn g-color-btn" style={{marginTop:'0.5em'}}>
+            Join Us On GitHub
         </Button>
-    </Container>
+                    </Grid.Column>
+                    <Grid.Column floated='right' width={7}>
+                    <Button className="u-btn g-color-btn-green"
+                    style={{marginTop:'0.5em',marginLeft:mobile ? '0px' : '-40px'}}>
+            Go To Project
+        </Button>
+                    </Grid.Column>
+                </Grid.Row>   
+            </Grid>
+
+    </div>
 )
 
 HomepageHeading.propTypes = {
@@ -93,20 +102,18 @@ class DesktopContainer extends Component {
                     <Segment
                         inverted
                         textAlign='center'
-                        style={{ minHeight: 700, padding: '1em 0em', backgroundColor: '#142b1a' }}
+                        style={{ minHeight: 700, padding: '1em 0em',backgroundSize: 'cover',backgroundImage: `url(${"/static/farsfound.png"})` }}
                         vertical
                     >
-                        <Menu
-                            fixed={fixed ? 'top' : null}
-                            inverted={!fixed}
-                            pointing={!fixed}
-                            secondary={!fixed}
-                            size='large'
-                        >
-                            <Container>
-                            </Container>
-                        </Menu>
-                        <HomepageHeading />
+              <Grid container stackable verticalAlign='middle'>
+                <Grid.Row>
+                    <Grid.Column width={6}>
+                    <HomepageHeading />
+                    </Grid.Column>
+                    <Grid.Column floated='right' width={6}>
+                    </Grid.Column>
+                </Grid.Row>   
+            </Grid>
                     </Segment>
 
                 </Visibility>
@@ -152,9 +159,18 @@ class MobileContainer extends Component {
                             inverted
                             textAlign='center'
                             className="g-py-mobile"
-                            style={{ minHeight: 350, padding: '1em 0em' ,backgroundColor:'rgb(20, 43, 26)'}}
+                            style={{ minHeight: 350, padding: '1em 0em' ,backgroundSize: 'cover',backgroundImage: `url(${"/static/farsfound.png"})`}}
                             vertical
                         >
+                                    <Grid container stackable verticalAlign='middle'>
+                <Grid.Row>
+                    <Grid.Column width={8}>
+                    <HomepageHeading mobile />
+                    </Grid.Column>
+                    <Grid.Column floated='right' width={6}>
+                    </Grid.Column>
+                </Grid.Row>   
+            </Grid>
                             {/* <Container>
                                 <Menu inverted pointing secondary size='large'>
                                     <Menu.Item onClick={this.handleToggle}>
@@ -170,7 +186,6 @@ class MobileContainer extends Component {
                                     </Menu.Item>
                                 </Menu>
                             </Container> */}
-                            <HomepageHeading mobile />
                         </Segment>
 
                         {children}

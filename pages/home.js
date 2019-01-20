@@ -24,9 +24,10 @@ import css from '../assets/css/custom.css';
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
-const ImageExampleFluid = () => <Image src='/static/logofarsfund.png' fluid style={{width:'65%',left:'17%'}}/>
+const ImageExampleFluid = () => <Image src='/static/logofarsfund4ending-low.png' fluid style={{width:'20%',left:'0%'}}/>
 const HomepageHeading = ({ mobile }) => (
     <div >
+        <ImageExampleFluid />
                 <Header as='h3' 
                  style={{
                 fontSize: mobile ? '2em' : '3.5em',
@@ -63,7 +64,6 @@ const HomepageHeading = ({ mobile }) => (
                     </Grid.Column>
                 </Grid.Row>   
             </Grid>
-
     </div>
 )
 

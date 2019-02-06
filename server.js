@@ -7,7 +7,7 @@ const handler = routes.getRequestHandler(app);
 
 
 app.prepare().then(() => {
-  createServer(handler).listen(6969, (err) => {
+  createServer(handler).listen(1500, (err) => {
       if (err) throw err;
       console.log('Ready on localhost:6969');
   });

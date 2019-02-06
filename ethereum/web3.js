@@ -29,6 +29,7 @@ if(typeof window !== 'undefined' && typeof window.web3 !== 'undefined'){
             'https://rinkeby.infura.io/v3/0a226ab70f0c4aa1952fadf15773518c'
         );
         web3 = new Web3(provider);
+        
 }
 
 export default web3;
